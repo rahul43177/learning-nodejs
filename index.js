@@ -1,8 +1,14 @@
-// making a simple API 
-const http = require('http')
-http.createServer((req,res)=>{
-    res.writeHead(200,{'content':'application\json'})
-    res.write({name : 'Rahul Mishra',email : 'rahulmisrha@gmail.com'})
-    res.end()
-}).listen(5000)
-// 
+/* process.argv => node and index are there  */
+// console.log(process.argv)
+const fs = require('fs')
+const input = process.argv
+
+if(input[2]=='add') {
+    fs.writeFileSync(input[2],input[3])
+}
+else if (input[2]=='remove') {
+    fs.unlinkSync(input[3])
+}
+else {
+    console.log("invalid input")
+}
