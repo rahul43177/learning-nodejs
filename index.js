@@ -1,10 +1,10 @@
-const colors = require('colors')
-console.log("hello".black)
-
-// package.json file learning 
-//we will first npm i 
-// and then we need to download packages
-// using npm i <dependancy name>
-//most important file is package.json if it is deleted your project is wrong 
-//many packages are there like express , loadash and many more 
-//node js is single threaded 
+// node-mon package - time saving module
+//if I change anything we dont need to change the code or run again and again  
+// to not run and stop server again and again - we use nodemon 
+// install nodemon => npm i nodemon -g (here g is for globally)
+// tu run nodemon --> nodemon index.js
+console.log("to run nodemon => nodemon index.js")
+// node js is a async language and node js is single threaded langugage 
+// sync => pehle first chalegi fir second chalegi 
+// async => no order , they work together ,it doesnt wait 
+// that is why js or node js is fast 
