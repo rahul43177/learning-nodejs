@@ -1,12 +1,17 @@
-const fs = require('fs')
-// core modules
-console.log("rahul mishra")
-// we will learn fs , buffer , HTTP
+// creating basic server 
+const http = require('http')
+// http handles servers request and requirements
 
-// modules - 
-// three types - 
-// global and non global
-fs.writeFileSync("hello.txt","likh do kuch ")
-console.log(__dirname) //directory name 
-console.log(__filename)
-fs.writeFileSync("rahul.txt","Write anything")
+
+
+// http.createServer((req,res)=>{
+//     res.write("<h1>hello this is rahul</h1>")
+//     res.end();
+// }).listen(4500)
+
+function dataControl(req,res) {
+    res.write("This is rahlul mishra")
+}
+http.createServer(dataControl).listen(4500)
+
+
