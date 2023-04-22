@@ -1,17 +1,10 @@
-// creating basic server 
-const http = require('http')
-// http handles servers request and requirements
+const colors = require('colors')
+console.log("hello".black)
 
-
-
-// http.createServer((req,res)=>{
-//     res.write("<h1>hello this is rahul</h1>")
-//     res.end();
-// }).listen(4500)
-
-function dataControl(req,res) {
-    res.write("This is rahlul mishra")
-}
-http.createServer(dataControl).listen(4500)
-
-
+// package.json file learning 
+//we will first npm i 
+// and then we need to download packages
+// using npm i <dependancy name>
+//most important file is package.json if it is deleted your project is wrong 
+//many packages are there like express , loadash and many more 
+//node js is single threaded 
