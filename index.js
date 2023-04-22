@@ -1,14 +1,13 @@
-/* process.argv => node and index are there  */
-// console.log(process.argv)
+/* Show file List with file system  */
 const fs = require('fs')
-const input = process.argv
+const path = require('path')
+const dirPath = path.join(__dirname,'files')
+// console.log(dirPath);
+// for(let i=0;i<5;i++) {
+//     fs.writeFileSync(`hello ${i}.txt`,`a simple text file`)
+// }
 
-if(input[2]=='add') {
-    fs.writeFileSync(input[2],input[3])
-}
-else if (input[2]=='remove') {
-    fs.unlinkSync(input[3])
-}
-else {
-    console.log("invalid input")
-}
+fs.readdir(dirPath, (err,files)=>{
+    console.log(files)
+})
+
