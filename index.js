@@ -1,23 +1,24 @@
-/**how node js works 
- * Call stack ---> tells which code to execute first ,whenever execution of the function is over the function leaves call stack 
- */
-console.log("Starting up ")
+//Express JS 
+/*  THis is not that complex , ez pz hai 
+express js is an framework of node js 
+Express.js, or simply Express, is a back end web application framework for building RESTful APIs with Node.js
 
-setTimeout(()=>{
-    console.log("2 seconds log")
-},2000)
+RESTful APIs == A REST API (also known as RESTful API) is an application programming interface (API or web API) that conforms to the constraints of REST architectural style and allows for interaction with RESTful web services. REST stands for representational state transfer and was created by computer scientist Roy Fielding.
 
-setTimeout(()=>{
-    console.log("0 seconds log")
-},0)
+*/
 
-console.log("finishing up ")
+// to install express ==> npm i express or npm install express
 
-/* order -> 
-stating up 
-finishing up 
-0 log 
-2 log    */
+const express = require('express')
+const app = express() //we make it executable 
+app.get('',(req,res)=>{
+    console.log("data sent by browser",req.query.name)
+    res.send("Hello this is home page")
+})
+
+app.get('/about',(req,res)=>{
+    res.send("welcome this is about page")
+})
 
 
-//this setTIme is from C++ and hence all those things which node takes from C++ are gone to Node APIs 
+app.listen(5000) //app.listen is used for making port
