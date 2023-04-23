@@ -1,23 +1,21 @@
-//Express JS 
-/*  THis is not that complex , ez pz hai 
-express js is an framework of node js 
-Express.js, or simply Express, is a back end web application framework for building RESTful APIs with Node.js
-
-RESTful APIs == A REST API (also known as RESTful API) is an application programming interface (API or web API) that conforms to the constraints of REST architectural style and allows for interaction with RESTful web services. REST stands for representational state transfer and was created by computer scientist Roy Fielding.
-
-*/
-
-// to install express ==> npm i express or npm install express
-
+//write html inside node js and we can do it 
+// we can give anchor tag and any HTML from here 
 const express = require('express')
 const app = express() //we make it executable 
 app.get('',(req,res)=>{
-    console.log("data sent by browser",req.query.name)
-    res.send("Hello this is home page")
+    // console.log("data sent by browser",req.query.name)
+    res.send(`
+    <h1> Welcome , to home Page </h1>  <a href="/about" >GO to about  </a>
+    `)
 })
 
 app.get('/about',(req,res)=>{
-    res.send("welcome this is about page")
+    res.send(`
+    <input type = "text" placeholder = "username" /> 
+
+    <button> Click me  </button>  
+    <a href="/" > Go to home page </a>   
+    `)
 })
 
 
